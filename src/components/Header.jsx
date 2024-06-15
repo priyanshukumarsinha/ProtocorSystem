@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+    const isStudent = useSelector((state) => state.NavbarData.isStudent)
     const username = "Harsh"
   return (
     <>
