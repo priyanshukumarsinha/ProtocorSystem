@@ -17,7 +17,7 @@ const Student = () => {
                 {activeElement === 'Result' && <Result />}
                 {activeElement === 'Attendance' && <Attendance />}
                 {activeElement === 'Mentoring' && <Mentoring />}
-                {activeElement === 'Concerns' && <Concerns />}
+                {(activeElement === 'Concerns' || activeElement === 'Student Concerns') && <Concerns />}
             </div>
         </div>
     )
