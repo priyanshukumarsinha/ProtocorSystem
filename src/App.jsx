@@ -1,22 +1,13 @@
-import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
-import Profile from './components/Profile'
-import Notification from './components/Notification'
+import Home from './pages/Home'
+import Student from './pages/Student'
+import Teacher from './pages/Teacher'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App() {  
   return (
     <>
-      <div className='w-full'>
-      <Header/>
-      </div>
-      <div className='w-full px-10 flex h-full'>
-        <Profile />
-        <Notification />
-      </div>
-
+      <Home />
+      <Student />
     </>
   )
 }
