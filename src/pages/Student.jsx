@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Header, Profile, Dashboard, Attendance, Concerns, Mentoring, Result, TimeTable } from '../components'
+import { Header, Profile, Dashboard, Attendance, Concerns, Mentoring, Result, TimeTable, AttendanceList} from '../components'
 
 const Student = () => {
     const isStudent = useSelector((state) => state.NavbarData.isStudent)
@@ -17,6 +17,7 @@ const Student = () => {
                 {activeElement === 'Result' && <Result />}
                 {activeElement === 'Attendance' && <Attendance />}
                 {activeElement === 'Mentoring' && <Mentoring />}
+                {activeElement === 'Attendance List' && <AttendanceList />}
                 {(activeElement === 'Concerns' || activeElement === 'Student Concerns') && <Concerns />}
             </div>
         </div>

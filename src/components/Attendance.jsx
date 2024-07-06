@@ -290,7 +290,7 @@ const Attendance = () => {
       subject : "Geography",
       daysAttended : 12,
       totalDays : 15
-    }
+    },
   ]
   return (
     <div className='w-2/3 bg-white  m-5 shadow-lg border flex flex-col pb-10  rounded-lg'>

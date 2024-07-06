@@ -10,5 +10,6 @@ import TimeTable from './TimeTable';
 import ToggleSwitch from "./ToggleSwitch";
 import StudentLogin from './StudentLogin';
 import TeacherLogin from './TeacherLogin';
+import AttendanceList from "./AttendanceList";
 
-export { Header, Navbar, Profile, Dashboard, Attendance, Concerns, Mentoring, Result, TimeTable, ToggleSwitch, StudentLogin, TeacherLogin };
+export { Header, Navbar, Profile, Dashboard, Attendance, AttendanceList,Concerns, Mentoring, Result, TimeTable, ToggleSwitch, StudentLogin, TeacherLogin };
