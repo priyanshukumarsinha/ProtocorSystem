@@ -329,8 +329,52 @@ const TimeTable = () => {
         </tbody>
       </table>
     </div>
-    <div>
-        {/* // Notifications */}
+    <div className='bg-white p-5 w-[30%] absolute left-14 h-[600px] rounded'>
+      <div>
+          {/* Icon */}
+          <h2 className='font-bold text-blue-600 px-5 py-3 border-b text-sm'>UPDATE TIMETABLE</h2>
+      </div>
+      <div>
+          <form className='flex flex-col gap-5 my-5'>
+              <div className='flex flex-col gap-3'>
+                  <label className='text-black font-semibold text-sm'>Select Day</label>
+                  <select className='border p-2 rounded'>
+                    {
+                      weekDays && weekDays.map((day) =>{
+                        return(
+                          <option 
+                          key={day}>
+                            {day}
+                          </option>
+                        )
+                      })
+                    }
+                  </select>
+              </div>
+              <div className='flex flex-col gap-3'>
+                  <label className='text-black font-semibold text-sm'>Select Period</label>
+                  <select className='border p-2 rounded'>
+                    {
+                      time && time.map((time) =>{
+                        return(
+                          <option 
+                          key={time}>
+                            {time}
+                          </option>
+                        )
+                      })
+                    }
+                  </select>
+              </div>
+              <div className='flex flex-col gap-3'>
+                  <label className='text-black font-semibold text-sm'>Subject</label>
+                  <input type='text' className='border p-2 rounded' />
+              </div>
+              <div>
+                  <button className='bg-blue-500 text-white px-3 py-1 rounded'>Submit</button>
+              </div>
+          </form>
+      </div>
     </div>
     
 </div>
