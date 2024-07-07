@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Notification = () => {
-    
+    const [showAddNotification, setShowAddNotification] = React.useState(false)
+
   return (
     <div className='w-2/3 bg-white  m-5 shadow-lg border flex flex-col pb-10  rounded-lg'>
         <div>
@@ -29,6 +30,35 @@ const Notification = () => {
                     </div>
                 </li>                
             </ol>
+        </div>
+        <div className='w-full p-5'>
+            <button 
+            onClick={() => setShowAddNotification(!showAddNotification)}
+            className='bg-blue-500 text-white px-3 py-1 rounded'>Add Notification</button>
+            {
+                showAddNotification && (
+                    <div className='w-full p-5 bg-gray-100 rounded-lg my-5'>
+                <form className='flex flex-col gap-5'>
+                    <div className='flex flex-col gap-3'>
+                        <label className='text-black font-semibold'>Title</label>
+                        <input type='text' className='border p-2 rounded' />
+                    </div>
+                    <div className='flex flex-col gap-3 font-semibold'>
+                        <label className='text-black'>Description</label>
+                        <textarea className='border p-2 rounded' />
+                    </div>
+                    <div className='flex gap-5'>
+                        {/* File Upload */}
+                        <label className='text-black font-semibold'>Upload File</label>
+                        <input type='file' />
+                    </div>
+                    <div>
+                        <button className='bg-blue-500 text-white px-3 py-1 rounded'>Submit</button>
+                    </div>
+                </form>
+            </div>
+                )
+            }
         </div>
     </div>
   )
