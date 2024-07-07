@@ -1,7 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Notification = () => {
     const [showAddNotification, setShowAddNotification] = React.useState(false)
+    const isStudent = useSelector((state) => state.NavbarData.isStudent)
 
   return (
     <div className='w-2/3 bg-white  m-5 shadow-lg border flex flex-col pb-10  rounded-lg'>
@@ -31,7 +33,9 @@ const Notification = () => {
                 </li>                
             </ol>
         </div>
-        <div className='w-full p-5'>
+        {
+            !isStudent && (
+                <div className='w-full p-5'>
             <button 
             onClick={() => setShowAddNotification(!showAddNotification)}
             className='bg-blue-500 text-white px-3 py-1 rounded'>Add Notification</button>
@@ -60,6 +64,8 @@ const Notification = () => {
                 )
             }
         </div>
+            )
+        }
     </div>
   )
 }
