@@ -38,7 +38,7 @@ export const TeacherNavbar = [
     {
         id:6,
         title: 'Student List',
-        icon: 'profile',
+        icon: 'studentlist',
         status : false,
     },
     {
